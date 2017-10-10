@@ -7,9 +7,10 @@ private:
     unsigned int count;     //count
 
 public:
-    Counter():count(0) //constructor
+    Counter():count(0) //constructor with no arguments
     {};
-
+    Counter(int c):count(c) // second way to support constructor...this one takes an argument...one argument.
+    {};
     unsigned int get_count() //returns count
     {
         return count;
@@ -19,9 +20,10 @@ public:
     //returns counter
     {
         ++count;
-        Counter temp;
+        /*Counter temp;
         temp.count = count;
-        return temp;
+        return temp;*/
+        return Counter(count);
     }
 };
 // Main
